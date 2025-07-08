@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AR Sürücü Kursu
 
-## Getting Started
+Artırılmış Gerçeklik teknolojisi kullanarak sürücü adaylarına interaktif sürüş eğitimi sunan React uygulaması.
 
-First, run the development server:
+## 🚀 Özellikler
 
+- **Sürüş Simülasyonu**: Gerçekçi sürüş koşullarında pratik yapma
+- **İnteraktif Dersler**: Trafik kuralları ve güvenli sürüş teknikleri
+- **Sınav Hazırlığı**: Ehliyet sınavına hazırlık ve test etme
+- **Modern UI**: Tailwind CSS ile responsive tasarım
+
+## 🛠️ Teknolojiler
+
+- **React 18** - Kullanıcı arayüzü kütüphanesi
+- **Vite** - Hızlı geliştirme ortamı
+- **Tailwind CSS** - CSS framework
+- **Headless UI** - Erişilebilir UI bileşenleri
+- **Heroicons** - İkon kütüphanesi
+
+## 📦 Kurulum
+
+1. Projeyi klonlayın:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd ar-surucu-kursu
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Bağımlılıkları yükleyin:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Geliştirme sunucusunu başlatın:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Tarayıcınızda [http://localhost:5173](http://localhost:5173) adresini açın.
 
-## Learn More
+## 🏗️ Geliştirme
 
-To learn more about Next.js, take a look at the following resources:
+### Mevcut Scriptler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Geliştirme sunucusunu başlatır
+- `npm run build` - Production build oluşturur
+- `npm run preview` - Production build'i önizler
+- `npm run lint` - ESLint ile kod kontrolü yapar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Proje Yapısı
 
-## Deploy on Vercel
+```
+src/
+├── App.jsx          # Ana uygulama bileşeni
+├── App.css          # App bileşeni stilleri
+├── main.jsx         # Uygulama giriş noktası
+└── index.css        # Global stiller (Tailwind CSS)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Gelecek Özellikler
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] AR kamera entegrasyonu
+- [ ] 3D sürüş simülasyonu
+- [ ] Çoklu oyuncu desteği
+- [ ] İlerleme takibi
+- [ ] Sertifika sistemi
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+## 🤝 Katkıda Bulunma
+
+1. Bu repository'yi fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`)
+5. Pull Request oluşturun
+
+## 📞 İletişim
+
+Proje hakkında sorularınız için issue açabilirsiniz.
