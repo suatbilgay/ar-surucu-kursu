@@ -21,7 +21,7 @@ export default function Header() {
             ))}
           </ul>
         </div>
-        {/* Sağ: Arama ve Sepet */}
+        {/* Sağ: Wp sohbet ve Konum */}
         <div className="flex items-center gap-4">
           <a
             href="https://wa.me/905414744468"
