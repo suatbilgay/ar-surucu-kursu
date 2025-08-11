@@ -1,3 +1,154 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+/* Özel renk paleti utility class'ları */
+@layer utilities {
+  .bg-driving-primary {
+    background-color: #DC2626;
+  }
+  
+  .bg-driving-secondary {
+    background-color: #1F2937;
+  }
+  
+  .bg-driving-accent {
+    background-color: #111827;
+  }
+  
+  .text-driving-primary {
+    color: #DC2626;
+  }
+  
+  .text-driving-secondary {
+    color: #1F2937;
+  }
+  
+  .text-driving-accent {
+    color: #111827;
+  }
+  
+  .text-driving-text {
+    color: #FFFFFF;
+  }
+  
+  .text-driving-text-dark {
+    color: #111827;
+  }
+  
+  .text-driving-muted {
+    color: #6B7280;
+  }
+  
+  .border-driving-primary {
+    border-color: #DC2626;
+  }
+  
+  .border-driving-secondary {
+    border-color: #1F2937;
+  }
+  
+  .border-driving-accent {
+    border-color: #111827;
+  }
+}
+
+/* Kartvizit slider için özel stiller */
+@layer components {
+  .kartvizit-slider {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+    height: 16rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: rgba(17, 24, 39, 0.2);
+  }
+  
+  .kartvizit-slide {
+    position: absolute;
+    inset: 0;
+    transition: all 1s ease-in-out;
+  }
+  
+  .kartvizit-slide.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .kartvizit-slide.inactive {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .kartvizit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Modern 3D Kartvizit Showcase Stilleri */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+  
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Animasyon gecikmeleri */
+@layer utilities {
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+}
+
+/* Hover efektleri */
+@layer utilities {
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+  }
+}
+
+/* Gradient text efekti */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+} 
