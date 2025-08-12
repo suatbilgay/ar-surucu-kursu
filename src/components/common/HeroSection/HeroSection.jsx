@@ -252,9 +252,9 @@ export default function HeroSection() {
           {/* Modern Kartvizit Showcase */}
           <div className={`mb-24 ${isVisible ? 'animate-fadeInScale' : 'opacity-0'}`} style={{animationDelay: '600ms'}}>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
                 Kurumsal 
-                <span className="text-gradient ml-4">Kimliğimiz</span>
+                <span className="text-gradient">Kimliğimiz</span>
               </h2>
               <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mb-8 rounded-full" />
               <p className="text-gray-300 text-2xl font-light">Profesyonel tasarımımızla tanışın</p>
