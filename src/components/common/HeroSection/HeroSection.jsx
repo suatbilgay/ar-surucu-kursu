@@ -222,46 +222,46 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 py-16">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
           {/* Hero Title */}
-          <div className={`text-center mb-20 ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}>
-            <div className="relative inline-block mb-8">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black relative z-10">
+          <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}>
+            <div className="relative inline-block mb-4 sm:mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-black relative z-10 leading-tight">
                 <span className="text-gradient animate-pulse3d inline-block drop-shadow-2xl">
                   AR
                 </span>
-                <span className="ml-6 text-white drop-shadow-2xl animate-shimmer">
+                <span className="ml-2 sm:ml-4 md:ml-6 text-white drop-shadow-2xl animate-shimmer block sm:inline">
                   SÜRÜCÜ KURSU
                 </span>
               </h1>
-              <div className="absolute inset-0 text-6xl md:text-8xl lg:text-9xl font-black text-red-600/20 blur-sm transform translate-x-2 translate-y-2">
+              <div className="absolute inset-0 text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-black text-red-600/20 blur-sm transform translate-x-1 translate-y-1 sm:translate-x-2 sm:translate-y-2 leading-tight">
                 AR SÜRÜCÜ KURSU
               </div>
             </div>
             
-            <div className="relative max-w-6xl mx-auto glass-effect rounded-3xl p-10 hover-lift animate-glow">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 rounded-3xl animate-shimmer" />
-              <p className="relative text-xl md:text-3xl lg:text-4xl text-gray-100 leading-relaxed font-light">
+            <div className="relative max-w-6xl mx-auto glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 hover-lift animate-glow">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 rounded-2xl sm:rounded-3xl animate-shimmer" />
+              <p className="relative text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-gray-100 leading-relaxed font-light">
                 1987'den bu güne, Aksaray'da ilk açılan ve çizgisini değiştirmeden 
-                <span className="text-gradient font-bold mx-3 animate-pulse">38 yıldır</span> 
+                <span className="text-gradient font-bold mx-1 sm:mx-2 md:mx-3 animate-pulse">38 yıldır</span> 
                 yoluna devam eden tek kurum
               </p>
             </div>
           </div>
 
           {/* Modern Kartvizit Showcase */}
-          <div className={`mb-24 ${isVisible ? 'animate-fadeInScale' : 'opacity-0'}`} style={{animationDelay: '600ms'}}>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
+          <div className={`mb-12 sm:mb-16 md:mb-20 lg:mb-24 ${isVisible ? 'animate-fadeInScale' : 'opacity-0'}`} style={{animationDelay: '600ms'}}>
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
                 Kurumsal 
-                <span className="text-gradient">Kimliğimiz</span>
+                <span className="text-gradient ml-2 sm:ml-3 md:ml-4">Kimliğimiz</span>
               </h2>
-              <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mb-8 rounded-full" />
-              <p className="text-gray-300 text-2xl font-light">Profesyonel tasarımımızla tanışın</p>
+              <div className="w-24 sm:w-32 md:w-40 h-1 sm:h-1.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full" />
+              <p className="text-gray-300 text-sm sm:text-lg md:text-xl lg:text-2xl font-light">Profesyonel tasarımımızla tanışın</p>
             </div>
             
             <div className="relative max-w-7xl mx-auto">
-              <div className="relative h-[500px] lg:h-[600px] glass-effect rounded-3xl border-2 border-red-500/30 hover-lift animate-glow overflow-hidden group">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] glass-effect rounded-2xl sm:rounded-3xl border-2 border-red-500/30 hover-lift animate-glow overflow-hidden group">
                  
                 {/* Kartvizit Images */}
                 {kartvizitImages.map((image, index) => (
@@ -304,32 +304,32 @@ export default function HeroSection() {
                 {/* Enhanced Navigation */}
                 <button
                   onClick={() => setCurrentKartvizit((prev) => (prev - 1 + kartvizitImages.length) % kartvizitImages.length)}
-                  className="absolute left-8 top-1/2 transform -translate-y-1/2 p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl rounded-full border border-red-400/50 hover:from-red-700 hover:to-red-800 transition-all duration-300 hover:scale-125 shadow-2xl group"
+                  className="absolute left-2 sm:left-4 md:left-8 top-1/2 transform -translate-y-1/2 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl rounded-full border border-red-400/50 hover:from-red-700 hover:to-red-800 transition-all duration-300 hover:scale-125 shadow-2xl group"
                 >
-                  <svg className="w-8 h-8 text-white group-hover:text-white transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white group-hover:text-white transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
                 
                 <button
                   onClick={() => setCurrentKartvizit((prev) => (prev + 1) % kartvizitImages.length)}
-                  className="absolute right-8 top-1/2 transform -translate-y-1/2 p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl rounded-full border border-red-400/50 hover:from-red-700 hover:to-red-800 transition-all duration-300 hover:scale-125 shadow-2xl group"
+                  className="absolute right-2 sm:right-4 md:right-8 top-1/2 transform -translate-y-1/2 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl rounded-full border border-red-400/50 hover:from-red-700 hover:to-red-800 transition-all duration-300 hover:scale-125 shadow-2xl group"
                 >
-                  <svg className="w-8 h-8 text-white group-hover:text-white transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white group-hover:text-white transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
                 
                 {/* Modern Indicators */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                <div className="absolute bottom-4 sm:bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 md:space-x-4">
                   {kartvizitImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentKartvizit(index)}
                       className={`transition-all duration-500 ${
                         index === currentKartvizit
-                          ? 'w-16 h-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full scale-125 shadow-lg animate-pulse'
-                          : 'w-4 h-4 bg-gray-500/60 rounded-full hover:bg-red-500/80 hover:scale-125'
+                          ? 'w-8 sm:w-12 md:w-16 h-2 sm:h-3 md:h-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full scale-125 shadow-lg animate-pulse'
+                          : 'w-2 sm:w-3 md:w-4 h-2 sm:h-3 md:h-4 bg-gray-500/60 rounded-full hover:bg-red-500/80 hover:scale-125'
                       }`}
                     />
                   ))}
@@ -363,15 +363,15 @@ export default function HeroSection() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-16 mb-24">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             {/* Documents Card */}
             <InteractiveCard 
               className={`${isVisible ? 'animate-slideInLeft' : 'opacity-0'}`}
               delay={1200}
             >
-              <h3 className="text-4xl md:text-5xl font-black text-white mb-12 text-center group-hover:text-gradient transition-all duration-300">
-                GEREKLİ EVRAKLAR
-              </h3>
+                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-6 sm:mb-8 md:mb-12 text-center group-hover:text-gradient transition-all duration-300">
+              GEREKLİ EVRAKLAR
+            </h3>
               
               <div className="space-y-6">
                 {[
@@ -406,9 +406,9 @@ export default function HeroSection() {
               className={`${isVisible ? 'animate-slideInRight' : 'opacity-0'}`}
               delay={1500}
             >
-              <h3 className="text-4xl md:text-5xl font-black text-white mb-12 text-center group-hover:text-gradient transition-all duration-300">
-                Neden AR Sürücü Kursu?
-              </h3>
+                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-6 sm:mb-8 md:mb-12 text-center group-hover:text-gradient transition-all duration-300">
+              Neden AR Sürücü Kursu?
+            </h3>
               
               <div className="space-y-8">
                 {[
@@ -460,18 +460,18 @@ export default function HeroSection() {
           </div>
 
           {/* Enhanced Vehicle Gallery */}
-          <div className={`text-center mb-20 ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`} style={{animationDelay: '1800ms'}}>
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
+          <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`} style={{animationDelay: '1800ms'}}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
               Eğitim <span className="text-gradient">Araçlarımız</span>
             </h2>
-            <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mb-16 rounded-full" />
+            <div className="w-24 sm:w-32 md:w-40 h-1 sm:h-1.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mb-8 sm:mb-12 md:mb-16 rounded-full" />
             
-            <div className="flex items-center justify-center space-x-12 lg:space-x-16">
+            <div className="flex items-center justify-center space-x-4 sm:space-x-8 md:space-x-12 lg:space-x-16">
               <button
                 onClick={prevPhoto}
-                className="p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl hover:from-red-700 hover:to-red-800 text-white rounded-full transition-all duration-300 hover:scale-125 border border-red-400/50 shadow-2xl group"
+                className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl hover:from-red-700 hover:to-red-800 text-white rounded-full transition-all duration-300 hover:scale-125 border border-red-400/50 shadow-2xl group"
               >
-                <svg className="w-10 h-10 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
@@ -479,7 +479,7 @@ export default function HeroSection() {
               <div className="relative group">
                 <div className="absolute -inset-6 bg-gradient-to-r from-red-600/30 to-red-400/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse" />
                 <div className="relative glass-effect rounded-3xl p-4 border-2 border-red-500/30 hover:border-red-400/50 transition-all duration-500">
-                  <div className="relative w-96 lg:w-[28rem] h-64 lg:h-72 overflow-hidden rounded-2xl">
+                  <div className="relative w-64 sm:w-80 md:w-96 lg:w-[28rem] h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-2xl">
                     <img 
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
                       src={photos[current]} 
@@ -497,16 +497,16 @@ export default function HeroSection() {
               
               <button
                 onClick={nextPhoto}
-                className="p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl hover:from-red-700 hover:to-red-800 text-white rounded-full transition-all duration-300 hover:scale-125 border border-red-400/50 shadow-2xl group"
+                className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-xl hover:from-red-700 hover:to-red-800 text-white rounded-full transition-all duration-300 hover:scale-125 border border-red-400/50 shadow-2xl group"
               >
-                <svg className="w-10 h-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
             
             {/* Photo indicators */}
-            <div className="flex justify-center space-x-3 mt-12">
+            <div className="flex justify-center space-x-2 sm:space-x-3 mt-6 sm:mt-8 md:mt-12">
               {photos.map((_, index) => (
                 <button
                   key={index}
@@ -522,14 +522,14 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom Cards - İyileştirilmiş Kontrast */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             <div className={`${isVisible ? 'animate-slideInLeft' : 'opacity-0'}`} style={{animationDelay: '2.1s'}}>
-              <div className="gradient-card rounded-3xl p-8 border-2 border-red-600/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 group hover:border-red-500/50 relative overflow-hidden">
+              <div className="gradient-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border-2 border-red-600/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 group hover:border-red-500/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 group-hover:text-red-300 transition-colors duration-300 relative z-10">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 group-hover:text-red-300 transition-colors duration-300 relative z-10">
                   🚗 Sürüşte Güven, Eğitimde Kalite!
                 </h3>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-100 transition-colors duration-300 relative z-10">
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed group-hover:text-gray-100 transition-colors duration-300 relative z-10">
                   Bay & bayan uzman eğitmenler, son model manuel ve otomatik araçlar ile 
                   güvenli sürüş eğitimi veriyoruz.
                 </p>
@@ -537,12 +537,12 @@ export default function HeroSection() {
             </div>
             
             <div className={`${isVisible ? 'animate-slideInRight' : 'opacity-0'}`} style={{animationDelay: '2.4s'}}>
-              <div className="gradient-card rounded-3xl p-8 border-2 border-red-600/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 group hover:border-red-500/50 relative overflow-hidden">
+              <div className="gradient-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border-2 border-red-600/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 group hover:border-red-500/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 group-hover:text-red-300 transition-colors duration-300 relative z-10">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 group-hover:text-red-300 transition-colors duration-300 relative z-10">
                   🏍️ Motosiklet Eğitimi
                 </h3>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-gray-100 transition-colors duration-300 relative z-10">
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed group-hover:text-gray-100 transition-colors duration-300 relative z-10">
                   A1 – A2 – A sınıfı motorlarla motosiklet eğitimi de bizde! 
                   Hayalinizdeki ehliyete güvenle ulaşın!
                 </p>
