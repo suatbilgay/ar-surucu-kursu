@@ -4,6 +4,7 @@ import Header from "./components/common/Header/Header";
 import Footer from "./components/common/Footer/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Pages
 import Home from "./pages/Home";
@@ -35,6 +36,7 @@ function App() {
         </main>
         <Footer />
         <ScrollToTopButton />
+        <SpeedInsights />
       </div>
     </Router>
   );
