@@ -164,28 +164,28 @@ export default function Courses() {
   return (
     <div className="min-h-screen bg-driving-secondary">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 via-transparent to-yellow-600/10" />
         
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
               <span className="text-gradient bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent">
                 KURSLAR
               </span>
-              <span className="ml-4 text-white">&</span>
-              <span className="ml-4 text-gradient bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="ml-2 sm:ml-3 md:ml-4 text-white">&</span>
+              <span className="ml-2 sm:ml-3 md:ml-4 text-gradient bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent block sm:inline">
                 FİYATLAR
               </span>
             </h1>
-            <div className="w-40 h-1.5 bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 mx-auto rounded-full" />
-            <p className="text-xl text-gray-300 mt-8 max-w-3xl mx-auto">
+            <div className="w-24 sm:w-32 md:w-40 h-1 sm:h-1.5 bg-gradient-to-r from-green-500 via-yellow-500 to-orange-500 mx-auto rounded-full" />
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto">
               İhtiyacınıza uygun kurs seçeneğini keşfedin ve hayalinizdeki ehliyete sahip olun
             </p>
           </motion.div>
@@ -193,15 +193,15 @@ export default function Courses() {
       </section>
 
       {/* Course Selection */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex justify-center mb-16">
-            <div className="glass-effect rounded-2xl p-2 border border-white/10 flex flex-wrap gap-2">
+      <section className="py-6 sm:py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex justify-center mb-8 sm:mb-12 md:mb-16">
+            <div className="glass-effect rounded-xl sm:rounded-2xl p-1 sm:p-2 border border-white/10 flex flex-wrap gap-1 sm:gap-2">
               {Object.entries(courses).map(([key, course]) => (
                 <button
                   key={key}
                   onClick={() => setSelectedCourse(key)}
-                  className={`px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 flex items-center space-x-2 ${
+                  className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 flex items-center space-x-1 sm:space-x-2 ${
                     selectedCourse === key
                       ? `bg-gradient-to-r ${course.gradient} text-white shadow-2xl scale-105`
                       : 'text-gray-400 hover:text-white hover:bg-white/5'

@@ -81,24 +81,24 @@ export default function Vehicles() {
   return (
     <div className="min-h-screen bg-driving-secondary">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-transparent to-blue-600/10" />
         
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
               <span className="text-gradient bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent">
                 ARAÇLARIMIZ
               </span>
             </h1>
-            <div className="w-40 h-1.5 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 mx-auto rounded-full" />
-            <p className="text-xl text-gray-300 mt-8 max-w-3xl mx-auto">
+            <div className="w-24 sm:w-32 md:w-40 h-1 sm:h-1.5 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 mx-auto rounded-full" />
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto">
               Son model, güvenli ve teknolojik araçlarımızla kaliteli sürücülük eğitimi alın
             </p>
           </motion.div>
@@ -106,15 +106,15 @@ export default function Vehicles() {
       </section>
 
       {/* Category Selection */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
+      <section className="py-6 sm:py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="flex justify-center mb-16">
-            <div className="glass-effect rounded-full p-2 border border-white/10">
+            <div className="glass-effect rounded-full p-1 sm:p-2 border border-white/10">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-8 py-4 mx-2 rounded-full font-bold text-lg transition-all duration-300 ${
+                  className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mx-1 sm:mx-2 rounded-full font-bold text-sm sm:text-base md:text-lg transition-all duration-300 ${
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
                       : 'text-gray-400 hover:text-white hover:bg-white/5'

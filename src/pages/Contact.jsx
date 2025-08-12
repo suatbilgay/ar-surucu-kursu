@@ -112,24 +112,24 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-driving-secondary">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-green-600/10" />
         
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
               <span className="text-gradient bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
                 İLETİŞİM
               </span>
             </h1>
-            <div className="w-40 h-1.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 mx-auto rounded-full" />
-            <p className="text-xl text-gray-300 mt-8 max-w-3xl mx-auto">
+            <div className="w-24 sm:w-32 md:w-40 h-1 sm:h-1.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 mx-auto rounded-full" />
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto">
               Sorularınız için bize ulaşın, size yardımcı olmaktan mutluluk duyarız
             </p>
           </motion.div>
@@ -137,9 +137,9 @@ export default function Contact() {
       </section>
 
       {/* Quick Actions */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <section className="py-6 sm:py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {quickActions.map((action, index) => (
               <motion.a
                 key={index}
@@ -149,15 +149,15 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                className="glass-effect rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 text-center group"
+                className="glass-effect rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 text-center group">
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r ${action.color} rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300`}>
                   {action.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {action.title}
                 </h3>
-                <p className="text-gray-300 text-sm">{action.desc}</p>
+                <p className="text-gray-300 text-xs sm:text-sm">{action.desc}</p>
               </motion.a>
             ))}
           </div>
@@ -165,37 +165,37 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
               İletişim <span className="text-blue-500">Bilgilerimiz</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
-                className="glass-effect rounded-3xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 text-center group"
+                className="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 text-center group"
               >
-                <div className={`w-20 h-20 bg-gradient-to-r ${info.color} rounded-2xl flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r ${info.color} rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300`}>
                   {info.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 group-hover:text-blue-400 transition-colors duration-300">
                   {info.title}
                 </h3>
                 <div className="space-y-2">
                   {info.details.map((detail, i) => (
-                    <p key={i} className="text-gray-300 text-sm leading-relaxed">
+                    <p key={i} className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                       {detail}
                     </p>
                   ))}
@@ -207,17 +207,17 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-green-900/20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-r from-blue-900/20 to-green-900/20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.4, duration: 0.8 }}
             >
-              <div className="glass-effect rounded-3xl p-8 border border-white/10">
-                <h3 className="text-3xl font-black text-white mb-8 text-center">
+              <div className="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/10">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-4 sm:mb-6 md:mb-8 text-center">
                   Bize <span className="text-blue-500">Ulaşın</span>
                 </h3>
 
@@ -320,17 +320,17 @@ export default function Contact() {
               className="space-y-8"
             >
               {/* Map */}
-              <div className="glass-effect rounded-3xl overflow-hidden border border-white/10">
-                <div className="h-80 bg-gradient-to-br from-blue-600/30 to-green-600/30 flex items-center justify-center">
+              <div className="glass-effect rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10">
+                <div className="h-64 sm:h-72 md:h-80 bg-gradient-to-br from-blue-600/30 to-green-600/30 flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="text-6xl mb-4">🗺️</div>
-                    <h4 className="text-2xl font-bold mb-2">Google Maps</h4>
-                    <p className="text-gray-300 mb-4">Konumumuzu görüntüleyin</p>
+                    <h4 className="text-xl sm:text-2xl font-bold mb-2">Google Maps</h4>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">Konumumuzu görüntüleyin</p>
                     <a
                       href="https://maps.google.com/?q=AR+Sürücü+Kursu+Aksaray"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold transition-colors duration-300"
+                      className="inline-flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold transition-colors duration-300 text-sm sm:text-base">
                     >
                       <span>📍</span>
                       <span>Haritada Göster</span>
@@ -340,8 +340,8 @@ export default function Contact() {
               </div>
 
               {/* Office Features */}
-              <div className="glass-effect rounded-3xl p-8 border border-white/10">
-                <h4 className="text-2xl font-bold text-white mb-6 text-center">Ofis İmkanlarımız</h4>
+              <div className="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/10">
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6 text-center">Ofis İmkanlarımız</h4>
                 <div className="grid grid-cols-2 gap-4">
                   {officeFeatures.map((feature, index) => (
                     <div key={index} className="text-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300">
